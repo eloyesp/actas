@@ -12,6 +12,12 @@ def assert_page_has_selector selector
     "Expected this page \n#{ page.body }\n to match: #{ selector }."
 end
 
+class Borrador
+  def enviar_confirmacion
+    $confirmacion = true
+  end
+end
+
 scope do
   test 'Nueva acta' do
     visit '/actas/nueva'
@@ -23,5 +29,6 @@ scope do
     fill_in 'firma',      with: 'eloyesp@gmail.com'
     click_on 'Hecho'
     assert_page_has_content 'recibirá un correo de confirmación'
+    assert $confirmacion
   end
 end

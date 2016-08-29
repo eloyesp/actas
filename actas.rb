@@ -19,6 +19,7 @@ Cuba.define do
     on post do
       # todo: should filter params
       borrador = Borrador.new(req.params)
+      borrador.enviar_confirmacion
       render('confirmacion', borrador: borrador)
     end
   end
