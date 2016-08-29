@@ -1,0 +1,24 @@
+h1 Nueva acta
+form method="post"
+
+  label
+    | Fecha de la reunión
+    input type="date" name="fecha"
+
+  label
+    | Institución
+    input name="institución"
+
+  label
+    | Miembros (email separados por ; o ,)
+    input name="miembros"
+
+  label
+    | Cuerpo del acta
+    textarea name="cuerpo"
+
+  label
+    | Firma (email)
+    input name="firma" type="email"
+
+  button Hecho

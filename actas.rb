@@ -12,9 +12,7 @@ Cuba.settings[:render][:template_engine] = 'slim'
 Cuba.define do
   on get do
     on 'actas', 'nueva' do
-      on root do
-        render('nueva_acta')
-      end
+      render('nueva_acta')
     end
   end
 end

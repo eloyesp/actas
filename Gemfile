@@ -7,5 +7,6 @@ gem 'thin'
 
 group :development do
   gem 'cutest'
-  gem 'rack-test'
+  gem 'capybara'
+  gem 'pry'
 end
