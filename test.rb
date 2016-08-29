@@ -16,6 +16,12 @@ scope do
   test 'Nueva acta' do
     visit '/actas/nueva'
     assert_page_has_content 'Nueva acta'
-    assert_page_has_selector 'form'
+    fill_in 'fecha',       with: '2016-10-26'
+    fill_in 'institución', with: 'Simulacros y simulaciones'
+    fill_in 'miembros',    with: 'eloyesp@gmail.com; fake@example.com'
+    fill_in 'cuerpo',      with: 'Se habló de todo un poco'
+    fill_in 'firma',      with: 'eloyesp@gmail.com'
+    click_on 'Hecho'
+    assert_page_has_content 'recibirá un correo de confirmación'
   end
 end
